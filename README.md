@@ -18,7 +18,7 @@ Add it in your root build.gradle at the end of repositories:
 ### Step 2. Add the dependency
 ```java
 	dependencies {
-	    compile 'com.github.loonggg:WeekCalendar:v1.1'
+	    compile 'com.github.loonggg:WeekCalendar:v1.2'
 	}
   ```
   
