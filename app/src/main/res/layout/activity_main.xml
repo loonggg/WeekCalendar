@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.loonggg.weekcalendar.view.WeekCalendar
+        android:id="@+id/mc_calendar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingBottom="10dp"
+        app:cornerMarkBg="@mipmap/order_book_icon"
+        app:daysSelectedBackground="@drawable/green_oval_bg"
+        app:isCornerMark="true"
+        app:monthBackgroundColor="#8F83F1"
+        app:nextArrowBg="@mipmap/white_right_arrow"
+        app:preArrowBg="@mipmap/white_left_arrow" />
+</RelativeLayout>

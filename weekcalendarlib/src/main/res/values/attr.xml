@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WeekCalendar">
+        <attr name="daysTextSize" format="dimension" />
+        <attr name="todayTextColor" format="color" />
+        <attr name="daysTextColor" format="color"/>
+        <attr name="daysSelectedTextColor" format="color" />
+        <attr name="daysSelectedBackground" format="reference|color" />
+        <attr name="weekTextSize" format="dimension" />
+        <attr name="weekTextColor" format="color" />
+        <attr name="weekBackgroundColor" format="reference|color" />
+        <attr name="hideTodayName" format="boolean" />
+        <attr name="isCornerMark" format="boolean" />
+        <attr name="cornerMarkBg" format="reference|color" />
+        <attr name="monthBackgroundColor" format="color" />
+        <attr name="monthTextColor" format="color" />
+        <attr name="nextArrowBg" format="reference|color" />
+        <attr name="preArrowBg" format="reference|color" />
+        <attr name="isShowMonth" format="boolean" />
+    </declare-styleable>
+</resources>
