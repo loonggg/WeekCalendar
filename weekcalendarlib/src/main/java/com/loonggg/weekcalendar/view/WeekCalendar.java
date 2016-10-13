@@ -370,7 +370,7 @@ public class WeekCalendar extends LinearLayout {
                     theDayForShow = datas.get(position);
                     notifyDataSetChanged();
                     if (listener != null) {
-                        listener.onDateClick(dayView, position);
+                        listener.onDateClick(getTheDayOfSelected());
                     }
                 }
             });
@@ -383,7 +383,7 @@ public class WeekCalendar extends LinearLayout {
      * 点击选中日期的回调接口
      */
     public interface OnDateClickListener {
-        void onDateClick(View view, int position);
+        void onDateClick(String time);
     }
 
     /**
@@ -398,7 +398,7 @@ public class WeekCalendar extends LinearLayout {
      *
      * @return
      */
-    public String getTheDayOfSelected() {
+    private String getTheDayOfSelected() {
         if (theDayOfSelected != null) {
             String sYear = String.valueOf(theDayOfSelected.year);
             String sMonth = String.valueOf(theDayOfSelected.month);

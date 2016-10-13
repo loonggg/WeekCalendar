@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <com.loonggg.weekcalendar.view.WeekCalendar
-        android:id="@+id/mc_calendar"
+        android:id="@+id/week_calendar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"

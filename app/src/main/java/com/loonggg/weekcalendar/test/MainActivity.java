@@ -3,7 +3,6 @@ package com.loonggg.weekcalendar.test;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        weekCalendar = (WeekCalendar) findViewById(R.id.mc_calendar);
+        weekCalendar = (WeekCalendar) findViewById(R.id.week_calendar);
         List<String> list = new ArrayList<>();
         list.add("2016-09-13");
         list.add("2016-10-13");
@@ -32,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         //设置日历点击事件
         weekCalendar.setOnDateClickListener(new WeekCalendar.OnDateClickListener() {
             @Override
-            public void onDateClick(View view, int position) {
-                Toast.makeText(MainActivity.this, weekCalendar.getTheDayOfSelected(), Toast.LENGTH_SHORT).show();
+            public void onDateClick(String time) {
+                Toast.makeText(MainActivity.this, time, Toast.LENGTH_SHORT).show();
             }
         });
 
