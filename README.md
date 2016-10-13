@@ -55,7 +55,7 @@ Add it in your root build.gradle at the end of repositories:
         app:nextArrowBg="@mipmap/white_right_arrow"
         app:preArrowBg="@mipmap/white_left_arrow" />
  ```
- ### Step 4. Impelement Listener 
+### Step 4. Impelement Listener 
  ```java
  weekCalendar = (WeekCalendar) findViewById(R.id.week_calendar);
         List<String> list = new ArrayList<>();
