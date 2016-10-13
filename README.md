@@ -57,7 +57,7 @@ Add it in your root build.gradle at the end of repositories:
  ```
 ### Step 4. Impelement Listener 
  ```java
- weekCalendar = (WeekCalendar) findViewById(R.id.week_calendar);
+        weekCalendar = (WeekCalendar) findViewById(R.id.week_calendar);
         List<String> list = new ArrayList<>();
         list.add("2016-09-13");
         list.add("2016-10-13");
