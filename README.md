@@ -1,8 +1,7 @@
 # WeekCalendar
 周日历，Weekly Calendar。
 ## 效果图
-
-
+![](https://raw.githubusercontent.com/loonggg/WeekCalendar/master/image/ss.gif)
 ## 使用方法（usage）
 ### Step 1. Add the JitPack repository to your build file
 ```java
@@ -44,7 +43,7 @@ Add it in your root build.gradle at the end of repositories:
 #### Example
 ```xml
  <com.loonggg.weekcalendar.view.WeekCalendar
-        android:id="@+id/mc_calendar"
+        android:id="@+id/week_calendar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
