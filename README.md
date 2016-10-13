@@ -57,21 +57,21 @@ Add it in your root build.gradle at the end of repositories:
  ```
 ### Step 4. Impelement Listener 
  ```java
-        weekCalendar = (WeekCalendar) findViewById(R.id.week_calendar);
-        List<String> list = new ArrayList<>();
-        list.add("2016-09-13");
-        list.add("2016-10-13");
-        list.add("2016-10-11");
-        list.add("2016-10-10");
-        list.add("2016-10-16");
-        //传入已经预约或者曾经要展示选中的时间列表
-        weekCalendar.setSelectDates(list);
-        //设置日历点击事件
-        weekCalendar.setOnDateClickListener(new WeekCalendar.OnDateClickListener() {
-            @Override
-            public void onDateClick(String time) {
-                Toast.makeText(MainActivity.this, time, Toast.LENGTH_SHORT).show();
-            }
-        });
+weekCalendar = (WeekCalendar) findViewById(R.id.week_calendar);
+List<String> list = new ArrayList<>();
+list.add("2016-09-13");
+list.add("2016-10-13");
+list.add("2016-10-11");
+list.add("2016-10-10");
+list.add("2016-10-16");
+//传入已经预约或者曾经要展示选中的时间列表
+weekCalendar.setSelectDates(list);
+//设置日历点击事件
+weekCalendar.setOnDateClickListener(new WeekCalendar.OnDateClickListener() {
+      @Override
+      public void onDateClick(String time) {
+          Toast.makeText(MainActivity.this, time, Toast.LENGTH_SHORT).show();
+      }
+});
  ```
 
