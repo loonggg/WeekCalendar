@@ -41,7 +41,7 @@ public class WeekCalendar extends LinearLayout {
 
     private Context context;
     private GridView mGridView = null;
-    private OnItemClickLitener mOnItemClickLitener;
+    private OnDateClickListener listener;
 
     private List<CalendarData> calendarDatas;
     private Map<Integer, List> weeks;
@@ -369,8 +369,8 @@ public class WeekCalendar extends LinearLayout {
                     theDayOfSelected = datas.get(position);
                     theDayForShow = datas.get(position);
                     notifyDataSetChanged();
-                    if (mOnItemClickLitener != null) {
-                        mOnItemClickLitener.onItemClick(dayView, position);
+                    if (listener != null) {
+                        listener.onDateClick(dayView, position);
                     }
                 }
             });
@@ -380,17 +380,17 @@ public class WeekCalendar extends LinearLayout {
 
 
     /**
-     * ItemClick的回调接口
+     * 点击选中日期的回调接口
      */
-    public interface OnItemClickLitener {
-        void onItemClick(View view, int position);
+    public interface OnDateClickListener {
+        void onDateClick(View view, int position);
     }
 
     /**
      * 设置回调接口
      */
-    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener) {
-        this.mOnItemClickLitener = mOnItemClickLitener;
+    public void setOnDateClickListener(OnDateClickListener listener) {
+        this.listener = listener;
     }
 
     /**
