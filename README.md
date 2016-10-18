@@ -30,7 +30,7 @@ Add it in your root build.gradle at the end of repositories:
 * daysSelectedBackground 设置选中的日期的背景
 * weekTextSize 设置星期栏的字体大小
 * weekTextColor 设置星期一栏中的字体颜色
-* weekBackgroundColor 设置星期一烂背景
+* weekBackgroundColor 设置星期一栏背景
 * hideTodayName 是否显示当天日期时的日期为“今”字，否则显示日期数字
 * isCornerMark 是否显示选中的日期中的右上角的角标
 * cornerMarkBg 设置角标图片
