@@ -342,7 +342,7 @@ public class WeekCalendar extends LinearLayout {
                 dayView.setBackgroundDrawable(null);
             } else {
                 dayView.setBackgroundDrawable(null);
-                dayView.setTextColor(daysTextColor);
+                dayView.setTextColor(weekTextColor);
             }
 
             if (selectDateList != null) {

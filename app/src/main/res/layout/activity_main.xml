@@ -13,6 +13,7 @@
         app:cornerMarkBg="@mipmap/order_book_icon"
         app:daysSelectedBackground="@drawable/green_oval_bg"
         app:isCornerMark="true"
+        app:weekTextColor="#099088"
         app:monthBackgroundColor="#8F83F1"
         app:nextArrowBg="@mipmap/white_right_arrow"
         app:preArrowBg="@mipmap/white_left_arrow" />
