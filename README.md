@@ -18,7 +18,7 @@ Add it in your root build.gradle at the end of repositories:
 ### Step 2. Add the dependency
 ```java
 	dependencies {
-	    compile 'com.github.loonggg:WeekCalendar:v1.3'
+	    compile 'com.github.loonggg:WeekCalendar:v1.4'
 	}
   ```
   
@@ -71,6 +71,13 @@ weekCalendar.setOnDateClickListener(new WeekCalendar.OnDateClickListener() {
       @Override
       public void onDateClick(String time) {
           Toast.makeText(MainActivity.this, time, Toast.LENGTH_SHORT).show();
+      }
+});
+//设置年月时间的回调
+weekCalendar.setOnCurrentMonthDateListener(new WeekCalendar.OnCurrentMonthDateListener() {
+      @Override
+	  public void onCallbackMonthDate(String year, String month) {
+          Toast.makeText(MainActivity.this, year + "-" + month, Toast.LENGTH_SHORT).show();
       }
 });
  ```
