@@ -36,5 +36,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        weekCalendar.setOnCurrentMonthDateListener(new WeekCalendar.OnCurrentMonthDateListener() {
+            @Override
+            public void onCallbackMonthDate(String year, String month) {
+                Toast.makeText(MainActivity.this, year + "-" + month, Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }

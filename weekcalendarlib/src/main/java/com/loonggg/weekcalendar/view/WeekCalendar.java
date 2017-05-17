@@ -57,6 +57,7 @@ public class WeekCalendar extends LinearLayout {
     private float daysTextSize, weekTextSize;
     private Drawable daysSelectedBackground, nextArrowBg, preArrowBg, cornerMarkBg;
     private List<String> selectDateList = null;
+    private OnCurrentMonthDateListener onCurrentMonthDateListener;
 
     public WeekCalendar(Context context) {
         super(context);
@@ -126,6 +127,9 @@ public class WeekCalendar extends LinearLayout {
     private void getWholeMonthDatas(CalendarData data) {
         calendarDatas = WeekCalendarUtil.getWholeMonthDay(data);//获取某天所在的整个月的数据（包含用于显示的上个月的天数和下个月的天数）
         weeks = WeekCalendarUtil.getWholeWeeks(calendarDatas);//获取当月有几个星期，以及每一星期对应的数据星期数据
+        if (onCurrentMonthDateListener != null) {
+            onCurrentMonthDateListener.onCallbackMonthDate(String.valueOf(data.year), String.valueOf(data.month));
+        }
         mTvYearMouth.setText(String.format("%s年%s月", String.valueOf(data.year), String.valueOf(data.month)));
     }
 
@@ -384,6 +388,22 @@ public class WeekCalendar extends LinearLayout {
      */
     public interface OnDateClickListener {
         void onDateClick(String time);
+    }
+
+    /**
+     * 回调当前显示的年月
+     */
+    public interface OnCurrentMonthDateListener {
+        void onCallbackMonthDate(String year, String month);
+    }
+
+    /**
+     * 设置显示当前月份的回调接口方法
+     *
+     * @param onCurrentMonthDateListener
+     */
+    public void setOnCurrentMonthDateListener(OnCurrentMonthDateListener onCurrentMonthDateListener) {
+        this.onCurrentMonthDateListener = onCurrentMonthDateListener;
     }
 
     /**
